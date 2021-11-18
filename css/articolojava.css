@@ -1,0 +1,23 @@
+button {
+    float:left;
+    max-width: 50px;
+    max-height: 50px;
+    min-width:50px;
+    min-height:50px;
+    margin-left:12.5%
+}
+#button1 {
+    background-color: red;
+}
+#button2 {
+    background-color: green;
+}
+#button3 {
+    background-color: blue;
+}
+#button4 {
+    background-color: yellow;
+}
+#button5 {
+    background-color: orange;
+}
