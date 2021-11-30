@@ -1,0 +1,18 @@
+button {
+    float:left;
+    max-width: 50px;
+    max-height: 50px;
+    min-width:50px;
+    min-height:50px;
+    margin-left:12.5%
+}
+.immagine2 {
+    background-color:blueviolet;
+    max-width: auto;
+    max-height:100px;
+}
+#immagine7 {
+    background-color:blueviolet;
+    max-width: auto;
+    max-height:100px;
+}
