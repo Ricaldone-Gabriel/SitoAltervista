@@ -1,0 +1,42 @@
+   .rosso{
+       background-color: red;
+       margin:2px;
+       padding:2px;
+       width: 200px;
+       height: 200px;
+       position:relative;
+       display: flex;
+       float: left;
+       
+   }
+   .giallo{
+       background-color: yellow;
+       margin:2px;
+       padding:2px;
+       width: 200px;
+       height: 200px;
+       position:relative;
+       display: flex;
+       float: left;
+   }
+   .blue{
+       background-color: blue;
+       margin:2px;
+       width: 200px;
+       height: 200px;
+       padding:2px;
+       position:relative;
+       display: flex;
+       float: left;
+   }
+   .verde{
+       background-color:green;
+       margin:2px;
+       width: 200px;
+       height: 200px;
+       padding:2px;
+       position:relative;
+       display: flex;
+       float: left;
+   }
+   
