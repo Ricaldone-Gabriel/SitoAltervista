@@ -1,0 +1,9 @@
+#miodiv {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border-width: 15px;
+  border: 5px inset white;
+  margin: 5px;
+  margin-top: 10px;
+}
