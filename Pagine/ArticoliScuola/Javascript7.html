@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> JavaScript </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../JS/script6.js"></script>
+  <link rel="stylesheet" href="../../css/articolojava6.css">
+</head>
+
+<body>
+  <!-- BARRA DI SOPRA-->
+  <div id="barraSopra">
+    <a href="../ChiSono.html">
+      <div class="pulsante">
+        <h1>Chi sono</h1>
+      </div>
+    </a>
+
+    <a href="../MenuArticoli.html">
+      <div class="pulsante">
+        <h1>Articoli</h1>
+      </div>
+    </a>
+
+    <a href="../../index.html">
+      <img src="../../Immagini/home.png" id="immagine">
+    </a>
+  </div>
+  <!--BARRA DI SOPRA-->
+  <br>
+  <div id="casellaTesto">
+    </p>
+    <h2>codice test per i giochi basasti sui tempi</h2>
+
+    <p id="demo">
+      Questa pagina conta quanto tempo ci metti a premere il bottone
+    </p>
+    <p id="out"></p>
+    <button type="button" onclick="count()">Invia</button>
+    <p>
+      let start=Date.now(); <-- Variabile del tempo <br>
+        function count() { <br>
+        document.getElementById("out").innerHTML
+        <-- prende il paragrafo sopra il bottone e lo modifica con quello che viene dopo <br>
+          +="Done in " + (Date.now() - start) + " ms" ; } <-- Sottrae il tempo attuale con la variabile start per
+            ottenere il tempo dopo il click </p>
+  </div>
+</body>
+
+</html>
