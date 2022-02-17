@@ -1,0 +1,20 @@
+#B {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+#A {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin-top: 200px;
+  margin-left: 200px;
+}
