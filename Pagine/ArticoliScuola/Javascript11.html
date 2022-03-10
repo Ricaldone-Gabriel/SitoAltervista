@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script>
+        let vettore = [];
+        let media;
+        let i;
+
+        function vettore1() {
+            for (i = 0; i < 50; i++) {
+                Math.round((Math.random() * 50) + 1);
+                vettore[i] = (Math.round((Math.random() * 50) + 1));
+                document.getElementById("vettore").innerHTML += vettore[i] + ",";
+            }
+            media1();
+        }
+
+        function media1() {
+
+            let somma = 0;
+
+            for (i = 0; i < vettore.length; i++) {
+                somma += vettore[i]
+            }
+            document.getElementById("media").innerHTML = somma / vettore.length;
+        }
+
+    </script>
+</head>
+
+<body>
+    <p id="vettore"></p>
+    <p id="media"></p>
+    <button onClick="vettore1()">Crea vettore</button>
+</body>
+
+</html>
