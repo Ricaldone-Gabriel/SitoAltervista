@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function spostaQuadrati() {
+        let a = document.getElementsByName("A");
+        let limite = a.length;
+        let cont = 0;
+        a[cont].style.backgroundColor = "red";
+        setInterval(() => {
+          if (cont < limite - 1) {
+            a[cont].style.backgroundColor = "yellow";
+            a[cont + 1].style.backgroundColor = "red";
+            cont++;
+          }
+          if (limite == 1) {
+            a[cont].style.backgroundColor = "red";
+          }
+          if (cont == limite - 1) {
+            cont = 0;
+            limite = limite - 1;
+          }
+        }, 100);
+      }
+    </script>
+    <style>
+      .quadrato {
+        background-color: yellow;
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border: 2px solid black;
+      }
+    </style>
+    <title>Verifica 2</title>
+  </head>
+  <body onload="spostaQuadrati()">
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+    <div class="quadrato" name="A"></div>
+  </body>
+</html>
