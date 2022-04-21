@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function spostaQuadrati() {
+        let a = document.getElementById("A");
+        let verticale = 5;
+        let orizzontale = 5;
+        setInterval(() => {
+          if (a.style.left != "300px" && verticale == 5) {
+            a.style.left = orizzontale + "px";
+            orizzontale += 5;
+          } else if (a.style.left == "300px" && verticale != 300) {
+            a.style.top = verticale + "px";
+            verticale += 5;
+          } else if (a.style.left != "5px") {
+            a.style.left = orizzontale + "px";
+            orizzontale -= 5;
+          } else if (a.style.top != "5px") {
+            a.style.top = verticale + "px";
+            verticale -= 5;
+          }
+        }, 10);
+      }
+    </script>
+    <style>
+      #A {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+      }
+    </style>
+    <title>Verifica 2</title>
+  </head>
+  <body onload="spostaQuadrati()">
+    <div id="A"></div>
+  </body>
+</html>
