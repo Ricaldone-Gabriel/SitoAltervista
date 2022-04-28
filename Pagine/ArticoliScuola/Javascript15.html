@@ -21,6 +21,8 @@
       /*  1) quale numero <1000 ha più fattori ?
             2) quanti fattori totali hanno i numeri compresi tra 1 e 1000 (somma di tutti i fattori esclusi i fattori dei numeri primi)
             3) qual è il numero che si trova moltiplicando il numero della domanda 1 e i numero che ha + fattori possibili tra i numeri 1000 e 2000*/
+      let fattoreMinore = 0;
+
       function milleNum() {
         let maxCont = -1;
         let cont;
@@ -56,6 +58,7 @@
         document.getElementById("output3").innerText = moltiplicazione;
         document.getElementById("output1").innerHTML = num1;
         document.getElementById("output2").innerHTML = num2;
+        document.getElementById("output4").innerHTML = fattoreMinore;
       }
 
       function fattorizzatore(n) {
@@ -64,6 +67,9 @@
         for (let fattore = 1; fattore <= fineciclo; fattore++) {
           if (n % fattore == 0) {
             cont++;
+            if (fattore < 1000) {
+              fattoreMinore++;
+            }
           }
         }
         return cont;
@@ -132,6 +138,7 @@
       <p id="output1"></p>
       <p id="output2"></p>
       <p id="output3"></p>
+      <p id="output4"></p>
     </div>
     <!--Barra di sotto-->
     <nav
