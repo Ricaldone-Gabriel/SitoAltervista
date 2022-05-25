@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <br>
+    <label for="input">Inserisci il numero da cercare</label>
+    <input id="input" type="text">
+    <br>
+    <button onclick="eseguiRicerca();">Cerca il numero nell'array</button>
+
+
+
+    <script>
+        let arrayPrimi = [];
+        for (let i = 2; i <= 100; i++) {
+
+            if (isPrime(i)) {
+                document.write(i + " ");
+                arrayPrimi.push(i);
+            }
+        }
+
+        function PrimoPrecSuc(n) {
+            let trov = true,
+                trov2 = true;
+            nSuc = n + 1;
+            nPre = n - 1;
+            while (trov || trov2) {
+                if (isPrime(nSuc) && trov) {
+                    document.write("<br>Numero primo Successivo: " + nSuc);
+                    trov = false;
+                } else {
+                    nSuc++;
+                }
+
+                if (isPrime(nPre) && trov2) {
+                    document.write("<br>Numero primo Precedente: " + nPre);
+                    trov2 = false;
+                } else {
+                    nPre--;
+                }
+            }
+            prodN(nSuc, n);
+            divN(nPre, n);
+        }
+
+        function prodN(nSuc, n) {
+            document.write("<br>Prodotto: " + nSuc * n);
+        }
+
+        function divN(nPre, n) {
+            document.write("<br>Divisione: " + n / nPre);
+        }
+
+        function eseguiRicerca() {
+            let trov = false;
+            let n = 0;
+            n = parseInt(document.getElementById("input").value);
+            for (let i = 0; i < arrayPrimi.length; i++) {
+                if (n == arrayPrimi[i]) {
+                    trov = true;
+                    i = arrayPrimi.length;
+                }
+            }
+            if (trov) {
+                document.write("TROVATO");
+                PrimoPrecSuc(n);
+            } else {
+                document.write("NON TROVATO");
+            }
+        }
+
+        function isPrime(n) {
+            // da true se n è primo cioè se n non ha fattori escluso 1 e n
+            // da false se n non è primo cioè ha un numero di fattori > 2
+            //ipotesi assurda cioè ipotizzo che tutti i numeri n siano primi
+            let primo = true;
+            for (let i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    primo = false;
+                    i = n / 2;
+                }
+            }
+            return primo;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
